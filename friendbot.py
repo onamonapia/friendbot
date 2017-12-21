@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix='*')
 friendcount = 0
 
 @bot.command()
-async def test(*arg):
+async def test(ctx, *arg):
     await ctx.send(str(arg))
     
 @bot.command()
@@ -66,7 +66,7 @@ async def cutecat(ctx):
     await ctx.send("IT'S SO CUTE!!!!!!!!!!!!!!")
     
 @bot.command()
-async def shouldi(*arg):
+async def shouldi(ctx, *arg):
     """tells you if you should do something!"""
     choice = random.choice(["Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not", "I don't know I'm just 100 lines of code... sorry :(", "Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not"])
     await ctx.send(str(choice))
