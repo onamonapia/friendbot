@@ -42,7 +42,7 @@ async def bemyfriend(ctx):
     friendcount += 1
     
 @bot.command()
-async def be(*, arg):
+async def be(ctx, *, arg):
     """becomes whatever u want it to be"""
     arg = str(arg)
     await ctx.send("Ok now I'm " + arg)
@@ -233,7 +233,7 @@ async def ilikeyounow(ctx):
     await ctx.send("Yay! <3 :D")
     
 @bot.command()
-async def befriendswith(*, arg):
+async def befriendswith(ctx, *, arg):
     await ctx.send(str(arg) + " is my new friend! <3")
     
 @bot.command()
