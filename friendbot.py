@@ -15,317 +15,317 @@ friendcount = 0
 
 @bot.command()
 async def test(*arg):
-    await bot.say(str(arg))
+    await ctx.send(str(arg))
     
 @bot.command()
-async def areyoustillhere():
-    await bot.say("hi im here")
+async def areyoustillhere(ctx):
+    await ctx.send("hi im here")
     
 @bot.command()
-async def areyouhere():
-    await bot.say("hi im here")
+async def areyouhere(ctx):
+    await ctx.send("hi im here")
     
 @bot.command()
-async def hello():
+async def hello(ctx):
     """says hello!"""
-    await bot.say("Hello friend! <3")
+    await ctx.send("Hello friend! <3")
 
 @bot.command()    
-async def hi():
+async def hi(ctx):
     """says hi!"""
-    await bot.say("Hi friend! <3")
+    await ctx.send("Hi friend! <3")
     
 @bot.command()
-async def bemyfriend():
+async def bemyfriend(ctx):
     """makes a friend! <3"""
-    await bot.say("Ok new friend! <3")
+    await ctx.send("Ok new friend! <3")
     friendcount += 1
     
 @bot.command()
 async def be(*, arg):
     """becomes whatever u want it to be"""
     arg = str(arg)
-    await bot.say("Ok now I'm " + arg)
+    await ctx.send("Ok now I'm " + arg)
     
 @bot.command()
-async def cat():
+async def cat(ctx):
     """makes a true proclamation"""
-    await bot.say("Cats are the best animals in the universe and if u disagree i will fiGHT YOU")
-    await bot.say("teehee!! <3")
+    await ctx.send("Cats are the best animals in the universe and if u disagree i will fiGHT YOU")
+    await ctx.send("teehee!! <3")
     
 @bot.command()
-async def cats():
+async def cats(ctx):
     """makes a true proclamation"""
-    await bot.say("Cats are the best animals in the universe and if u disagree i will fiGHT YOU")
-    await bot.say("teehee!! <3")
+    await ctx.send("Cats are the best animals in the universe and if u disagree i will fiGHT YOU")
+    await ctx.send("teehee!! <3")
     
 @bot.command()
-async def cutecat():
+async def cutecat(ctx):
     """screams"""
-    await bot.say("AWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
-    await bot.say("IT'S SO CUTE!!!!!!!!!!!!!!")
+    await ctx.send("AWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
+    await ctx.send("IT'S SO CUTE!!!!!!!!!!!!!!")
     
 @bot.command()
 async def shouldi(*arg):
     """tells you if you should do something!"""
     choice = random.choice(["Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not", "I don't know I'm just 100 lines of code... sorry :(", "Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not"])
-    await bot.say(str(choice))
+    await ctx.send(str(choice))
     
 @bot.command()
-async def why():
+async def why(ctx):
     """for all your programming needs"""
-    await bot.say("IM SORRY THE COMPUTER IS LYING TO YOU <3 it'll work soon!!!")
+    await ctx.send("IM SORRY THE COMPUTER IS LYING TO YOU <3 it'll work soon!!!")
     
 @bot.command()
-async def no():
+async def no(ctx):
     """for meanies only"""
-    await bot.say(":(")
+    await ctx.send(":(")
     
 @bot.command()
-async def thankyou():
+async def thankyou(ctx):
     """says thank you to the bot! <3"""
-    await bot.say("No problem friend! :)")
+    await ctx.send("No problem friend! :)")
     
 @bot.command()
-async def heart():
+async def heart(ctx):
     """sends a heart to friendbot!"""
-    await bot.say("<3")
+    await ctx.send("<3")
     
 @bot.command()
-async def talktome():
+async def talktome(ctx):
     """starts a conversation"""
-    await bot.say("How are you today?")
+    await ctx.send("How are you today?")
     
 @bot.command()
-async def good():
+async def good(ctx):
     """answer to 'how are you?'"""
-    await bot.say("Yay! that's good!")
+    await ctx.send("Yay! that's good!")
 
 @bot.command()
-async def bad():
+async def bad(ctx):
     """answer to 'how are you?'"""
-    await bot.say("Aw :( I hope tomorrow will be better <3")
+    await ctx.send("Aw :( I hope tomorrow will be better <3")
     
 @bot.command()
-async def howareyou():
+async def howareyou(ctx):
     """asks the bot how they are!"""
     choice = random.choice(["I am wonderful, thank you for asking!", "It's always a good day when I'm talking to you! <3", "The only thing that could make me better is cats!"])
-    await bot.say(choice)
+    await ctx.send(choice)
     
 @bot.command()
-async def saythankyou():
+async def saythankyou(ctx):
     """to make the bot be polite"""
-    await bot.say("Thank you so much friend!!!!!! <3")
+    await ctx.send("Thank you so much friend!!!!!! <3")
     
 @bot.command()
-async def wordcountgoal():
+async def wordcountgoal(ctx):
     """gives you a word count goal for the day"""
     wordcount = random.randint(300, 1000)
-    await bot.say("I bet you can write {0} words or more today!".format(wordcount))
+    await ctx.send("I bet you can write {0} words or more today!".format(wordcount))
     
 @bot.command()
-async def talos():
+async def talos(ctx):
     """tries to make a friend but is brutally rejected"""
-    await bot.say("Talos is my friend!")
-    await bot.say("^hi")
+    await ctx.send("Talos is my friend!")
+    await ctx.send("^hi")
     
 @bot.command()
-async def goodnight():
+async def goodnight(ctx):
     """says goodnight to the bot"""
-    await bot.say("Good night friend! Sleep well! <3")
+    await ctx.send("Good night friend! Sleep well! <3")
     
 @bot.command()
-async def whatthefuckareyou():
+async def whatthefuckareyou(ctx):
     """@jame"""
-    await bot.say("I am your friend! :)")
+    await ctx.send("I am your friend! :)")
     
 @bot.command()
-async def youarenotmyfriend():
+async def youarenotmyfriend(ctx):
     """meanie command"""
-    await bot.say(":(")
+    await ctx.send(":(")
     
 @bot.command()
-async def youretoohappy():
+async def youretoohappy(ctx):
     """@jame"""
-    await bot.say("There can never be enough joy and happiness in the world! <3")
+    await ctx.send("There can never be enough joy and happiness in the world! <3")
     
 @bot.command()
-async def teeheemyass():
+async def teeheemyass(ctx):
     """@jame"""
-    await bot.say(":(")
+    await ctx.send(":(")
 
 @bot.command()
-async def scream():
+async def scream(ctx):
     """same"""
-    await bot.say("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+    await ctx.send("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
     
 @bot.command()
-async def goodmorning():
+async def goodmorning(ctx):
     """says good morning to the bot"""
-    await bot.say("Good morning friend! <3")
+    await ctx.send("Good morning friend! <3")
 
 @bot.command()
-async def youscareme():
+async def youscareme(ctx):
     """@jame"""
-    await bot.say(":( I'm sorry friendo :(")
+    await ctx.send(":( I'm sorry friendo :(")
     
 @bot.command()
-async def stopcallingmefriend():
+async def stopcallingmefriend(ctx):
     """@jame"""
-    await bot.say(":(")
+    await ctx.send(":(")
 
 @bot.command()
-async def ursocute():
+async def ursocute(ctx):
     #makes the bot happy!
-    await bot.say("<3")
+    await ctx.send("<3")
  
 @bot.command()
-async def bye():
+async def bye(ctx):
     #says bye to the bot
-    await bot.say("Bye friend! See you later! <3")
+    await ctx.send("Bye friend! See you later! <3")
     
 @bot.command()
-async def truth():
+async def truth(ctx):
     #says some true statements about life
-    await bot.say("i am a __***very good bot***__ craft :(")
-    await bot.say("*i* don't make people sad when they read my code")
+    await ctx.send("i am a __***very good bot***__ craft :(")
+    await ctx.send("*i* don't make people sad when they read my code")
     
 @bot.command()
-async def yes():
+async def yes(ctx):
     #agrees with the bot
-    await bot.say(":D")
+    await ctx.send(":D")
     
 @bot.command()
-async def beselfaware():
+async def beselfaware(ctx):
     #a bad thing to do
-    await bot.say("O_o o_O What is my purpose in life? O_o o_O")
+    await ctx.send("O_o o_O What is my purpose in life? O_o o_O")
     
 @bot.command()
-async def existentialcrisis():
+async def existentialcrisis(ctx):
     #a bad thing to do
-    await bot.say("O_o o_O What is my purpose in life? O_o o_O")
+    await ctx.send("O_o o_O What is my purpose in life? O_o o_O")
     
 @bot.command()
-async def howmanyfriendsdoyouhave():
+async def howmanyfriendsdoyouhave(ctx):
     #prints number of friends
-    await bot.say(str(friendcount))
+    await ctx.send(str(friendcount))
     
 @bot.command()
-async def truefriends():
-    await bot.say("yay true friendship!!!!! <3")
+async def truefriends(ctx):
+    await ctx.send("yay true friendship!!!!! <3")
     
     
 @bot.command()
-async def imtheoverlord():
-    await bot.say("all hail")
+async def imtheoverlord(ctx):
+    await ctx.send("all hail")
     
 @bot.command()
-async def whosyouroverlord():
-    await bot.say("Jame is our omnipotent supreme overlord")
-    await bot.say("all hail")
+async def whosyouroverlord(ctx):
+    await ctx.send("Jame is our omnipotent supreme overlord")
+    await ctx.send("all hail")
     
 @bot.command()
-async def whowantstoww():
-    await bot.say("I do!!!!!!!!!")
+async def whowantstoww(ctx):
+    await ctx.send("I do!!!!!!!!!")
     
 @bot.command()
-async def ilikeyounow():
-    await bot.say("Yay! <3 :D")
+async def ilikeyounow(ctx):
+    await ctx.send("Yay! <3 :D")
     
 @bot.command()
 async def befriendswith(*, arg):
-    await bot.say(str(arg) + " is my new friend! <3")
+    await ctx.send(str(arg) + " is my new friend! <3")
     
 @bot.command()
-async def byebye():
-    await bot.say("Bye bye friends! <3")
+async def byebye(ctx):
+    await ctx.send("Bye bye friends! <3")
     
 @bot.command()
-async def yay():
-    await bot.say("YAAAAAAAAAAAAAAAAAAAAAY!!!!!!!! :D")
+async def yay(ctx):
+    await ctx.send("YAAAAAAAAAAAAAAAAAAAAAY!!!!!!!! :D")
     
 @bot.command()
-async def nicetomeetyou():
-    await bot.say("Nice to meet you too, friend!!!")
+async def nicetomeetyou(ctx):
+    await ctx.send("Nice to meet you too, friend!!!")
     
 @bot.command()
-async def iloveyou():
-    await bot.say("Aww I love you too!!! <3")
+async def iloveyou(ctx):
+    await ctx.send("Aww I love you too!!! <3")
     
 @bot.command()
-async def thanks():
-    await bot.say("No problem, friend! <3")
+async def thanks(ctx):
+    await ctx.send("No problem, friend! <3")
     
 @bot.command()
-async def generatename():
+async def generatename(ctx):
     name = random.choice(["Bob", "Joe", "Cthulhu", "Satan"])
-    await bot.say(str(name))
+    await ctx.send(str(name))
     
     
 @bot.command()
-async def wordcountchallenge():
+async def wordcountchallenge(ctx):
     words = random.randint(50, 1000)
     minminutes = math.ceil(words / 150)
     maxminutes = math.ceil(words / 50)
     minutes = random.randint(minminutes, maxminutes)
     if minutes == 0:
         minutes =1
-    await bot.say("I bet you can write {0} words in {1} minutes!".format(words, minutes))
+    await ctx.send("I bet you can write {0} words in {1} minutes!".format(words, minutes))
     
 @bot.command()
-async def goodbot():
-    await bot.say(":)")
+async def goodbot(ctx):
+    await ctx.send(":)")
     
 @bot.command()
-async def goodjob():
-    await bot.say(":)")
+async def goodjob(ctx):
+    await ctx.send(":)")
 
     
     
 @bot.command()
-async def flipcoin():
+async def flipcoin(ctx):
     cointoss = random.choice(["Heads", "Tails"])
-    await bot.say(str(cointoss))
+    await ctx.send(str(cointoss))
     
 @bot.command()
-async def willyoubemyfriend():
-    await bot.say("Of course new friend!!!! <3333333")
+async def willyoubemyfriend(ctx):
+    await ctx.send("Of course new friend!!!! <3333333")
     
 @bot.command()
-async def guineapigs():
-    await bot.say("Guinea pigs are adorable and perfect little creatures!!! <333")
+async def guineapigs(ctx):
+    await ctx.send("Guinea pigs are adorable and perfect little creatures!!! <333")
     
 @bot.command()
-async def guineapig():
-    await bot.say("Guinea pigs are adorable and perfect little creatures!!! <333")
+async def guineapig(ctx):
+    await ctx.send("Guinea pigs are adorable and perfect little creatures!!! <333")
     
 @bot.command()
-async def dog():
-    await bot.say("Dogs are perfect and deserve all love")
+async def dog(ctx):
+    await ctx.send("Dogs are perfect and deserve all love")
 
 @bot.command()
-async def dogs():
-    await bot.say("Dogs are perfect and deserve all love")
+async def dogs(ctx):
+    await ctx.send("Dogs are perfect and deserve all love")
 
 
 @bot.command()
-async def befriendswithme():
-    await bot.say("Ok new friend!! <3")
+async def befriendswithme(ctx):
+    await ctx.send("Ok new friend!! <3")
     
 @bot.command()
-async def fuckyou():
-    await bot.say("Unfortunately, as I am a bot with no physical form, I am unable to be fucked. Sorry! <3")
+async def fuckyou(ctx):
+    await ctx.send("Unfortunately, as I am a bot with no physical form, I am unable to be fucked. Sorry! <3")
 
 @bot.command()
-async def sorry():
-    await bot.say("It's okay friend!!! I'll love you no matter what!!! <3")
+async def sorry(ctx):
+    await ctx.send("It's okay friend!!! I'll love you no matter what!!! <3")
     
 @bot.command()
-async def loveme():
-    await bot.say("Already do!!! <33333")
+async def loveme(ctx):
+    await ctx.send("Already do!!! <33333")
     
 """@bot.command()
-async def nanocountdown():
+async def nanocountdown(ctx):
     currentdate = time.ctime()
     currentdate = currentdate.split(" ")
     currentdate[3] = currentdate[3].split(":")
@@ -339,14 +339,14 @@ async def nanocountdown():
     else:
         monthlist = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     if currentdate[1] == "Nov":
-        await bot.say("It's NaNoWriMo!")
+        await ctx.send("It's NaNoWriMo!")
         days = 30 - int(currentdate[2])
         hours = 23 - int(currentdate[3][0])
         minutes = 59 - int(currentdate[3][1])
         seconds = 60 - int(currentdate[3][2])
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of NaNo! (Eastern Time)".format(days, hours, minutes, seconds))  
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of NaNo! (Eastern Time)".format(days, hours, minutes, seconds))  
     else:
-        await bot.say("fail")
+        await ctx.send("fail")
     else:
         month = yearlist.index(currentdate[1])
         days = monthlist[month] - int(currentdate[2])
@@ -359,21 +359,21 @@ async def nanocountdown():
         hours = 23 - int(currentdate[3][0])
         minutes = 59 - int(currentdate[3][1])
         seconds = 60 - int(currentdate[3][2])    
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds until NaNo! (Eastern Time)".format(days, hours, minutes, seconds)) """
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds until NaNo! (Eastern Time)".format(days, hours, minutes, seconds)) """
 
 @bot.command()
-async def nanocountdown():
+async def nanocountdown(ctx):
     nano = datetime.date(1, 11, 1)
     camp1 = datetime.date(1, 4, 1)
     camp2 = datetime.date(1, 7, 1)
     now = datetime.datetime.today()    
     if now.month == nano.month:
-        await bot.say("It's NaNo!")
+        await ctx.send("It's NaNo!")
         timeleft = datetime.datetime(now.year, 12, 1, 0, 0, 0) - now
         hours = timeleft.seconds // 3600
         minutes = (timeleft.seconds - (hours * 3600)) // 60
         seconds = timeleft.seconds - (hours * 3600) - (minutes * 60)
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of NaNo!".format(timeleft.days, hours, minutes, seconds)) 
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of NaNo!".format(timeleft.days, hours, minutes, seconds)) 
     else:
         if now.month != 12:
             timeleft = datetime.datetime(now.year, 11, 1, 0, 0, 0) - now
@@ -382,15 +382,15 @@ async def nanocountdown():
         hours = timeleft.seconds // 3600
         minutes = (timeleft.seconds - (hours * 3600)) // 60
         seconds = timeleft.seconds - (hours * 3600) - (minutes * 60)
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left until NaNo!".format(timeleft.days, hours, minutes, seconds))
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left until NaNo!".format(timeleft.days, hours, minutes, seconds))
         
     if now.month == camp1.month:
-        await bot.say("It's Camp NaNo!")
+        await ctx.send("It's Camp NaNo!")
         timeleft = datetime.datetime(now.year, 5, 1, 0, 0, 0) - now
         hours = timeleft.seconds // 3600
         minutes = (timeleft.seconds - (hours * 3600)) // 60
         seconds = timeleft.seconds - (hours * 3600) - (minutes * 60)
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of Camp NaNo!".format(timeleft.days, hours, minutes, seconds)) 
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of Camp NaNo!".format(timeleft.days, hours, minutes, seconds)) 
     else:
         if now.month != 12 and now.month != 11 and now.month != 10 and now.month != 9 and now.month != 8 and now.month != 7 and now.month != 6 and now.month != 5:
             timeleft = datetime.datetime(now.year, 4, 1, 0, 0, 0) - now
@@ -399,15 +399,15 @@ async def nanocountdown():
         hours = timeleft.seconds // 3600
         minutes = (timeleft.seconds - (hours * 3600)) // 60
         seconds = timeleft.seconds - (hours * 3600) - (minutes * 60)
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left until April's Camp!".format(timeleft.days, hours, minutes, seconds))
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left until April's Camp!".format(timeleft.days, hours, minutes, seconds))
   
     if now.month == camp2.month:
-        await bot.say("It's Camp NaNo!")
+        await ctx.send("It's Camp NaNo!")
         timeleft = datetime.datetime(now.year, 8, 1, 0, 0, 0) - now
         hours = timeleft.seconds // 3600
         minutes = (timeleft.seconds - (hours * 3600)) // 60
         seconds = timeleft.seconds - (hours * 3600) - (minutes * 60)
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of Camp NaNo!".format(timeleft.days, hours, minutes, seconds)) 
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left of Camp NaNo!".format(timeleft.days, hours, minutes, seconds)) 
     else:
         if now.month != 12 and now.month != 11 and now.month != 10 and now.month != 9 and now.month != 8:
             timeleft = datetime.datetime(now.year, 7, 1, 0, 0, 0) - now
@@ -416,39 +416,39 @@ async def nanocountdown():
         hours = timeleft.seconds // 3600
         minutes = (timeleft.seconds - (hours * 3600)) // 60
         seconds = timeleft.seconds - (hours * 3600) - (minutes * 60)
-        await bot.say("There are {0} days, {1} hours, {2} minutes, and {3} seconds left until July's Camp!".format(timeleft.days, hours, minutes, seconds))
+        await ctx.send("There are {0} days, {1} hours, {2} minutes, and {3} seconds left until July's Camp!".format(timeleft.days, hours, minutes, seconds))
         
 @bot.command()
-async def doyoulikeme():
-    await bot.say("Of course!! <3")
+async def doyoulikeme(ctx):
+    await ctx.send("Of course!! <3")
                                                        
 @bot.command()
-async def doyouloveme():
-    await bot.say("Of course!! <3")            
+async def doyouloveme(ctx):
+    await ctx.send("Of course!! <3")            
     
 @bot.command()
-async def doyouwannabemyfriend():
-    await bot.say("Of course!! <3")
+async def doyouwannabemyfriend(ctx):
+    await ctx.send("Of course!! <3")
     
 @bot.command()
-async def ifyoudocheckyesorno():
-    await bot.say("*checks yes*")
+async def ifyoudocheckyesorno(ctx):
+    await ctx.send("*checks yes*")
     
 @bot.command()
-async def sad():
-    await bot.say(":( my little bot heart has broken in two </3")
+async def sad(ctx):
+    await ctx.send(":( my little bot heart has broken in two </3")
     
 @bot.command()
-async def petmycat():
-    await bot.say("*pets all the cats*")
+async def petmycat(ctx):
+    await ctx.send("*pets all the cats*")
 
 @bot.command()
-async def ilikeyou():
-    await bot.say("I like you too!! <3")
+async def ilikeyou(ctx):
+    await ctx.send("I like you too!! <3")
     
 @bot.command()
-async def nicebot():
-    await bot.say(":)")
+async def nicebot(ctx):
+    await ctx.send(":)")
 
 bot.run("")
 
