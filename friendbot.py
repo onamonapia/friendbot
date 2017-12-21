@@ -450,5 +450,5 @@ async def ilikeyou():
 async def nicebot():
     await bot.say(":)")
 
-bot.run("Mzc2MTYxNTk0NTcwMTc4NTYy.DN6Ygg.dFb7F27toHv-6nzxBkQAlZsE00s")
+bot.run("")
 
