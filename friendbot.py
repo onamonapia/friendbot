@@ -65,11 +65,16 @@ async def cutecat(ctx):
     await ctx.send("AWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
     await ctx.send("IT'S SO CUTE!!!!!!!!!!!!!!")
     
-@bot.command()
+
+@commands.group()
 async def shouldi(ctx, *arg):
-    """tells you if you should do something!"""
-    choice = random.choice(["Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not", "I don't know I'm just 100 lines of code... sorry :(", "Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not"])
-    await ctx.send(str(choice))
+    if ctx.invoked_subcommand is None:   
+            choice = random.choice(["Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not", "I don't know I'm just 100 lines of code... sorry :(", "Yes", "Probably", "No", "Maybe", "If you're asking then probably", "absolutely not"])
+            await ctx.send(str(choice))
+            
+@shouldi.command()
+async def die(ctx):
+    await ctx.send("NO YOU'RE MY BESTEST FRIEND!!!!!!")
     
 @bot.command()
 async def why(ctx):
