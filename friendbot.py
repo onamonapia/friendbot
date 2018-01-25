@@ -454,6 +454,17 @@ async def ilikeyou(ctx):
 @bot.command()
 async def nicebot(ctx):
     await ctx.send(":)")
+    
+@bot.command()
+async def youregay(ctx):
+    await ctx.send("https://www.washingtonian.com/wp-content/uploads/2016/12/rainbow-flag-waving-994x559.jpg")
+
+@bot.command()
+async def areyouqueer(ctx):
+    await ctx.send("YES!!! I LOVE EVERYBODY!!! <33333")
+
+
+
 
 bot.run("")
 
